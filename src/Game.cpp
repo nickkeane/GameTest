@@ -5,5 +5,5 @@
 namespace Game {
 Game::Game() { mScene = new Scene(); }
 
-Game::~Game() {}
+Game::~Game() { delete mScene; }
 }  // namespace Game
