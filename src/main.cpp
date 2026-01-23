@@ -1,5 +1,6 @@
-#include "Game.h"
+#include "Game.hpp"
 
 int main(int argc, const char** argv) {
-    return 0;
+  Game::Game game;
+  return 0;
 }

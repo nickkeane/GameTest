@@ -1,11 +1,9 @@
-#include "Game.h"
+#include "Game.hpp"
+
+#include "scene/Scene.hpp"
 
 namespace Game {
-    Game::Game() {
+Game::Game() { mScene = new Scene(); }
 
-    }
-
-    Game::~Game() {
-        
-    }
-}
+Game::~Game() {}
+}  // namespace Game
