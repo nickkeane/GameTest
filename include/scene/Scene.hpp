@@ -5,13 +5,15 @@
 #include <string>
 
 namespace Game {
-    class Scene {
-        public:
-            Scene();
-            ~Scene();
-        public:
-            std::unique_ptr<void>& getObject(std::string const& szName) const;
-        private:
-            std::map<std::string, std::unique_ptr<void>> mmapObjects;
-    };
-}
+class Scene {
+ public:
+  Scene();
+  ~Scene();
+
+ public:
+  std::unique_ptr<void> const& getObject(std::string const& szName) const;
+
+ private:
+  std::map<std::string, std::unique_ptr<void>> mmapObjects;
+};
+}  // namespace Game
