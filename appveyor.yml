@@ -1,0 +1,93 @@
+version: "{build}"
+
+# Test Matrix
+environment:
+    matrix:
+        - COMPILER: gcc
+          PLATFORM: mingw32
+
+        - COMPILER: gcc
+          PLATFORM: mingw64
+
+        - COMPILER: clang
+          PLATFORM: mingw64
+
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2026
+          platform: x86
+          GENERATOR: Visual Studio 18 2026
+          CONFIG: Release
+
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2026
+          platform: x86
+          GENERATOR: Visual Studio 18 2026
+          CONFIG: Debug
+
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2026
+          platform: x64
+          GENERATOR: Visual Studio 18 2026 Win64
+          CONFIG: Release
+
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2026
+          platform: x64
+          GENERATOR: Visual Studio 18 2026 Win64
+          CONFIG: Debug
+
+before_build:
+    - cmake . -G "%GENERATOR%" -DLZ4_STREAM_UseBundledLz4=ON
+
+build_script:
+    - echo "*** Building %COMPILER% %PLATFORM% ***"
+    # Configure PATH for MinGW builds
+    - if [%PLATFORM%]==[mingw32] set PATH=%PATH_MINGW32%;%PATH%
+    - if [%PLATFORM%]==[mingw64] set PATH=%PATH_MINGW64%;%PATH%
+    # GCC Build
+    # - if [%COMPILER%]==[gcc] (
+    #     echo "GCC build started" &&
+    #     gcc -v &&
+    #     make -v &&
+    #     echo "Packaging GCC build..." &&
+    #     mkdir bin\dll bin\static bin\example bin\include &&
+    #     copy tests\test.cpp bin\example\ &&
+    #     copy lib\*.h bin\include\ &&
+    #     copy lib\*.a bin\static\ &&
+    #     copy lib\*.dll* bin\dll\ >nul 2>&1 &&
+    #   )
+    # Clang Build
+    # - if [%COMPILER%]==[clang] (
+    #     echo "Clang build started" &&
+    #     clang -v &&
+    #     make -v &&
+    #     set "CFLAGS=--target=x86_64-w64-mingw32 -Werror -Wconversion -Wno-sign-conversion"
+    #   )
+
+    # # Create release archives (GCC only)
+    # - if [%COMPILER%]==[gcc] if [%PLATFORM%]==[mingw64] 7z.exe a -bb1 bin\game_x64.zip .\bin\Game.exe README.md .\bin\dll .\bin\static .\bin\include
+    # - if [%COMPILER%]==[gcc] if [%PLATFORM%]==[mingw64] appveyor PushArtifact bin\game_x64.zip
+    # - if [%COMPILER%]==[gcc] if [%PLATFORM%]==[mingw32] 7z.exe a -bb1 bin\game_x86.zip .\bin\Game.exe README.md .\bin\dll .\bin\static .\bin\include
+    # - if [%COMPILER%]==[gcc] if [%PLATFORM%]==[mingw32] appveyor PushArtifact bin\game_x86.zip
+
+    # CMake Build
+    - cmake --build . --config "%CONFIG%"
+
+test_script:
+    - echo "*** Testing %COMPILER% %PLATFORM% ***"
+    - ctest -C "%CONFIG%" -V -j
+#   - fullbench.exe -i0 fullbench.exe
+#   - echo "Launching fuzzer test..."
+#   - fuzzer.exe -v -T20s
+#   - cd ..
+
+install:
+    - echo Installing %COMPILER% %PLATFORM%
+    - mkdir bin
+    # Setup MinGW environment
+    - set "PATH_MINGW32=c:\MinGW\bin;c:\MinGW\usr\bin"
+    - set "PATH_MINGW64=c:\msys64\mingw64\bin;c:\msys64\usr\bin"
+    - copy C:\MinGW\bin\mingw32-make.exe C:\MinGW\bin\make.exe >nul 2>&1
+    - copy C:\MinGW\bin\gcc.exe C:\MinGW\bin\cc.exe >nul 2>&1
+
+artifacts:
+    - path: bin\game_x64.zip
+      name: Game Windows x64 Build
+    - path: bin\game_x86.zip
+      name: Game Windows x86 Build
