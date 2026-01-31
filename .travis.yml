@@ -2,28 +2,28 @@ language: cpp
 dist: noble
 
 matrix:
-    include:
-        - compiler: gcc
-          env: BUILD_TYPE=Coverage
-        - compiler: gcc
-          env: BUILD_TYPE=Debug
-        - compiler: gcc
-          env: BUILD_TYPE=Release
-        - compiler: clang
-          env: BUILD_TYPE=Debug
+  include:
+    - compiler: gcc
+      env: BUILD_TYPE=Coverage
+    - compiler: gcc
+      env: BUILD_TYPE=Debug
+    - compiler: gcc
+      env: BUILD_TYPE=Release
+    - compiler: clang
+      env: BUILD_TYPE=Debug
 
 os:
-    - linux
-    - osx
+  - linux
+  - osx
 
 before_script:
-    - mkdir build
-    - cd build
-    - cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-    - make
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+  - make
 
 script:
-    - ctest -V
+  - ctest -V
 
 after_success:
-    - if [ "${BUILD_TYPE}" == "Coverage" ]; then bash <(curl -s https://codecov.io/bash); fi
+  - if [ "${BUILD_TYPE}" == "Coverage" ]; then bash <(curl -s https://codecov.io/bash); fi

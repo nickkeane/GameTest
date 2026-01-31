@@ -1,0 +1,16 @@
+Checks: >
+  google-*,
+  bugprone-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  clang-analyzer-*,
+  -google-readability-todo,
+  -modernize-use-trailing-return-type,
+  -readability-function-size,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -readability-named-parameter,
+  -readability-static-accessed-through-instance,
+  -performance-inefficient-string-concatenation
+FormatStyle: file
