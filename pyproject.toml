@@ -1,0 +1,12 @@
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+select = [ "E", "F", "I", "B", "C", "D", "S", "ANN" ]
+ignore = [ "D100", "D101", "D102", "D400", "D415" ]
+exclude = [ ".git", "__pycache__", "build", "dist", "venv", ".venv" ]
+src = ["conanfile.py"]
+
+[tool.black]
+line-length = 88
+target-version = ["py314"]
+include = '\.pyi?$'

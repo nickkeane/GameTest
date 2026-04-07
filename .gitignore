@@ -43,6 +43,9 @@
 # Custom Entries
 ################
 build/
-.vscode/
+cmake-build-*/
+conan-build-*/
+.vs/
 .cache/
 graph.html
+graph-outdated.json

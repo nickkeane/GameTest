@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 4,
+    "minor": 2,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "UCRT64",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc.exe",
+        "CMAKE_CXX_COMPILER": "g++.exe"
+      },
+      "vendor": {
+        "jetbrains.com/clion": {
+          "toolchain": "UCRT64"
+        }
+      }
+    },
+    {
+      "name": "UCRT64-Debug",
+      "inherits": "UCRT64",
+      "binaryDir": "build/ucrt64/Debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "conan-build-ucrt64/build/Debug/generators/conan_toolchain.cmake"
+      }
+    },
+    {
+      "name": "UCRT64-Release",
+      "inherits": "UCRT64",
+      "binaryDir": "build/ucrt64/Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "conan-build-ucrt64/build/Release/generators/conan_toolchain.cmake"
+      }
+    },
+    {
+      "name": "VS2026",
+      "hidden": true,
+      "generator": "Visual Studio 18 2026",
+      "architecture": "x64",
+      "vendor": {
+        "jetbrains.com/clion": {
+          "toolchain": "Visual Studio 2026"
+        }
+      }
+    },
+    {
+      "name": "VS2026-Debug",
+      "inherits": "VS2026",
+      "binaryDir": "build/vs2026/Debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CONFIGURATION_TYPES": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "conan-build-vs2026-debug/build/generators/conan_toolchain.cmake"
+      }
+    },
+    {
+      "name": "VS2026-Release",
+      "inherits": "VS2026",
+      "binaryDir": "build/vs2026/Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CONFIGURATION_TYPES": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "conan-build-vs2026-release/build/generators/conan_toolchain.cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "BuildBase", "hidden": true, "jobs": 32 },
+    {
+      "name": "UCRT64-Debug",
+      "configurePreset": "UCRT64-Debug",
+      "inherits": "BuildBase"
+    },
+    {
+      "name": "UCRT64-Release",
+      "configurePreset": "UCRT64-Release",
+      "inherits": "BuildBase"
+    },
+    {
+      "name": "VS2026-Debug",
+      "configurePreset": "VS2026-Debug",
+      "inherits": "BuildBase"
+    },
+    {
+      "name": "VS2026-Release",
+      "configurePreset": "VS2026-Release",
+      "inherits": "BuildBase"
+    }
+  ],
+  "testPresets": []
+}

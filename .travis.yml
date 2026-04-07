@@ -11,6 +11,8 @@ matrix:
       env: BUILD_TYPE=Release
     - compiler: clang
       env: BUILD_TYPE=Debug
+    - compiler: clang
+      env: BUILD_TYPE=Release
 
 os:
   - linux

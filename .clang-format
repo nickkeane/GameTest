@@ -1,1 +1,5 @@
 BasedOnStyle: Google
+IndentPPDirectives: AfterHash
+ColumnLimit: 250
+QualifierAlignment: Custom
+QualifierOrder: ['type', 'const', 'volatile']

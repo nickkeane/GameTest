@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="5" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="MyGameProject" targetName="MyGameProject_Nasm" />
+      <config projectName="MyGameProject" targetName="MyGameProject" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="UCRT64-Debug - UCRT64-Debug" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="build/ucrt64/Debug" />
+      <configuration PROFILE_NAME="UCRT64-Release - UCRT64-Release" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="build/ucrt64/Release" />
+      <configuration PROFILE_NAME="VS2026-Debug - VS2026-Debug" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="build/vs2026/Debug" />
+      <configuration PROFILE_NAME="VS2026-Release - VS2026-Release" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="build/vs2026/Release" />
+      <configuration PROFILE_NAME="UCRT64-Debug" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="build/ucrt64/Debug" />
+      <configuration PROFILE_NAME="UCRT64-Release" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="build/ucrt64/Release" />
+      <configuration PROFILE_NAME="VS2026-Debug" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="build/vs2026/Debug" />
+      <configuration PROFILE_NAME="VS2026-Release" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="build/vs2026/Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1115d949-df59-4306-960a-3415e377bb97" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/GameTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-UCRT64-Release.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-VS2026-Release.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-depgraph-outdated-pkgs.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-depgraph.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-profiles/ucrt64-debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-profiles/ucrt64-release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-profiles/vs2026-debug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conan-setup.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Random.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/nasm/math.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Random.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.clang-tidy" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeUserPresets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeUserPresets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conan_profile" beforeDir="false" afterPath="$PROJECT_DIR$/conan-profiles/vs2026-release" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conanfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/conanfile.py.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/googletest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/script/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scene/Scene.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/GITHUB/GameTest" value="3AXKoyIsNjQIXy0HDuYTBEjNGuK" />
+    </persistenceIdMap>
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/CMakeLists.txt" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="315" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:UCRT64-Debug - UCRT64-Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../SDK/Platforms/Win64/MSYS2/ucrt64/include/simdjson.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.conan2/p/b/simdj18e67dacfa65f/p/include/simdjson.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="So00cRC3" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="groupByToolId" value="true" />
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="3.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3AXKoyIsNjQIXy0HDuYTBEjNGuK" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.MyGameProject.executor": "Debug",
+    "CMake Debug.MyGameProject.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.jfrog.conanplugin.addconansupport": "true",
+    "com.jfrog.conanplugin.automanage.cmake.advanced.settings": "true",
+    "com.jfrog.conanplugin.conanexecutable": "conan",
+    "com.jfrog.conanplugin.hasbeensetup": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/GITHUB/GameTest/conan-profiles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GITHUB\GameTest\conan-profiles" />
+      <recent name="C:\GITHUB\GameTest" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GITHUB\GameTest\include\nasm" />
+      <recent name="C:\GITHUB\GameTest\src\asm" />
+      <recent name="C:\GITHUB\GameTest\include" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.MyGameProject">
+    <configuration name="MyGameProject" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="MyGameProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="MyGameProject" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug" RUN_TARGET_PROJECT_NAME="MyGameProject" RUN_TARGET_NAME="MyGameProject">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyGameProject_Nasm" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="MyGameProject_Nasm" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.MyGameProject" />
+      <item itemvalue="CMake Application.MyGameProject_Nasm" />
+      <item itemvalue="CMake Debug.MyGameProject" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-PY-261.22158.340" />
+        <option value="bundled-python-sdk-b63d5a1f7c97-b61e75351b1f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.22158.340" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1115d949-df59-4306-960a-3415e377bb97" name="Changes" comment="" />
+      <created>1772733654815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772733654815</updated>
+      <workItem from="1772733656570" duration="7774000" />
+      <workItem from="1774739838450" duration="3184000" />
+      <workItem from="1774744104584" duration="12397000" />
+      <workItem from="1774810450410" duration="621000" />
+      <workItem from="1774829574378" duration="18197000" />
+      <workItem from="1774891042289" duration="28235000" />
+      <workItem from="1775089234637" duration="4782000" />
+      <workItem from="1775094305183" duration="17156000" />
+      <workItem from="1775174624184" duration="6062000" />
+      <workItem from="1775221763990" duration="573000" />
+      <workItem from="1775222381065" duration="1724000" />
+      <workItem from="1775234807301" duration="63000" />
+      <workItem from="1775236786976" duration="9054000" />
+      <workItem from="1775245889017" duration="551000" />
+      <workItem from="1775359042372" duration="8437000" />
+      <workItem from="1775402875360" duration="13141000" />
+      <workItem from="1775450937515" duration="27000" />
+      <workItem from="1775495517783" duration="2489000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Roaming/Python/Python314/site-packages/conan/internal/model/conan_file.py</url>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp</url>
+          <line>52</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeListConfigurationType">
+        <watch expression="CMAKE_CONFIGURATION_TYPES" />
+        <watch expression="MSVC" />
+        <watch expression="CYGWIN" />
+        <watch expression="MSYS" />
+        <watch expression="MINGW" />
+        <watch expression="UCRT64" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
