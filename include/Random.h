@@ -1,0 +1,8 @@
+//
+// Created by Nick on 3/30/2026.
+//
+
+#ifndef MYGAMEPROJECT_RANDOM_H
+#define MYGAMEPROJECT_RANDOM_H
+
+#endif //MYGAMEPROJECT_RANDOM_H

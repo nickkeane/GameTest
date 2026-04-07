@@ -1,4 +1,0 @@
-[submodule "other/googletest"]
-	path = other/googletest
-	url = https://github.com/google/googletest.git
-	ignore = dirty
