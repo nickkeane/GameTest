@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="5" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppGeneralOptions" type="string" />
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
@@ -21,8 +22,46 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="MyGameProject" targetName="MyGameProject_Nasm" />
+      <config projectName="MyGameProject" targetName="ExperimentalBuild" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyCoverage" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ContinuousStart" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ContinuousSubmit" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyBuild" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlySubmit" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="DirectX-Headers" />
+      <config projectName="MyGameProject" targetName="ExperimentalCoverage" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyUpdate" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyTest" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="glad" />
+      <config projectName="MyGameProject" targetName="Nightly" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ExperimentalSubmit" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ContinuousBuild" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="SDL_uclibc" />
+      <config projectName="MyGameProject" targetName="cpm-update-package-lock" />
+      <config projectName="MyGameProject" targetName="fmt" />
+      <config projectName="MyGameProject" targetName="ExperimentalMemCheck" folderName="CTestDashboardTargets" />
       <config projectName="MyGameProject" targetName="MyGameProject" />
+      <config projectName="MyGameProject" targetName="ContinuousCoverage" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="SDL3-shared" />
+      <config projectName="MyGameProject" targetName="ContinuousUpdate" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="Continuous" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyMemoryCheck" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="c4core" folderName="c4core" />
+      <config projectName="MyGameProject" targetName="spdlog" />
+      <config projectName="MyGameProject" targetName="ContinuousTest" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ryml" folderName="" />
+      <config projectName="MyGameProject" targetName="ExperimentalUpdate" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="MyGameProject_Nasm" />
+      <config projectName="MyGameProject" targetName="NightlyStart" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ContinuousMemCheck" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyConfigure" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ContinuousConfigure" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="Experimental" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ExperimentalStart" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="NightlyMemCheck" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="DirectX-Guids" />
+      <config projectName="MyGameProject" targetName="ExperimentalTest" folderName="CTestDashboardTargets" />
+      <config projectName="MyGameProject" targetName="ExperimentalConfigure" folderName="CTestDashboardTargets" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -39,45 +78,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1115d949-df59-4306-960a-3415e377bb97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/GameTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-UCRT64-Release.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-VS2026-Release.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-depgraph-outdated-pkgs.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-depgraph.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-profiles/ucrt64-debug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-profiles/ucrt64-release" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-profiles/vs2026-debug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conan-setup.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Random.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/nasm/math.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Random.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake/CPM.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/AssetManager.hpp.old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Assets/Model.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Bitmap.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Hasher.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/JobProcessor.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/JobProcessorPool.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/LoaderJob.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Renderer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Window.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/other/glad-release/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AssetManager.hpp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bitmap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/JobProcessor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Renderer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Window.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.cpp.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.clang-tidy" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeUserPresets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeUserPresets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conan_profile" beforeDir="false" afterPath="$PROJECT_DIR$/conan-profiles/vs2026-release" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conanfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/conanfile.py.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other/googletest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/script/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakePresets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CMakePresets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conanfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/conanfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Random.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Random.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/build-MinGW-Release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/build-MinGW-Release.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/build-VS2026-Release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/build-VS2026-Release.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/KHR/khrplatform.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/KHR/khrplatform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/glad/gl.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/glad/gl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/glad/vulkan.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/glad/vulkan.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_platform.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_platform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_av1std.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_av1std.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_av1std_decode.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_av1std_decode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h264std.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h264std.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h264std_decode.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h264std_decode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h264std_encode.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h264std_encode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h265std.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h265std.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h265std_decode.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h265std_decode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codec_h265std_encode.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codec_h265std_encode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/include/vk_video/vulkan_video_codecs_common.h" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/include/vk_video/vulkan_video_codecs_common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/src/gl.c" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/src/gl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/glad/src/vulkan.c" beforeDir="false" afterPath="$PROJECT_DIR$/other/glad-release/src/vulkan.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Random.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Random.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scene/Scene.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nasm/math.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/nasm/math.asm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,15 +145,24 @@
     <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/CMakeLists.txt" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="315" />
+    <option name="cachedIndexableFilesCount" value="39957" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:UCRT64-Debug - UCRT64-Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/build/ucrt64/Debug/_deps/directx-headers-src/include/directx/d3d12.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/include/AssetManager.hpp.old" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../SDK/Platforms/Win64/MSYS2/ucrt64/include/simdjson.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.conan2/p/b/simdj18e67dacfa65f/p/include/simdjson.h" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -111,6 +172,65 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.9239030502012586" />
+      <entry key="MS500" value="4.1840923511067825" />
+      <entry key="S2" value="6.699191126388666" />
+      <entry key="S5" value="11.238606835981187" />
+      <entry key="S10" value="17.268934908990243" />
+      <entry key="S30" value="32.369356940644515" />
+      <entry key="S60" value="48.785051479656076" />
+      <entry key="M2" value="75.03820112012335" />
+      <entry key="M5" value="143.97422507528526" />
+      <entry key="M10" value="233.18575073480744" />
+      <entry key="M15" value="290.2525575006502" />
+      <entry key="M30" value="378.7827308990766" />
+      <entry key="H1" value="471.17453761240887" />
+      <entry key="H2" value="638.3781736002294" />
+      <entry key="H4" value="971.0463112175195" />
+      <entry key="D1" value="2529.846330558805" />
+      <entry key="W1" value="3944.127513348249" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.1503108074415609E-250" />
+      <entry key="MS500" value="1.0286001120403986E-50" />
+      <entry key="S2" value="3.559523087764804E-13" />
+      <entry key="S5" value="1.4290157881463349E-5" />
+      <entry key="S10" value="0.005231253826613523" />
+      <entry key="S30" value="0.28026060213603726" />
+      <entry key="S60" value="0.8535164672873629" />
+      <entry key="M2" value="1.7715832256818265" />
+      <entry key="M5" value="4.016311278766433" />
+      <entry key="M10" value="7.246128039635408" />
+      <entry key="M15" value="9.468279383206722" />
+      <entry key="M30" value="13.565666414250304" />
+      <entry key="H1" value="21.058909114489055" />
+      <entry key="H2" value="42.189893224296945" />
+      <entry key="H4" value="93.19265916685372" />
+      <entry key="D1" value="333.08506982949996" />
+      <entry key="W1" value="549.3290842658748" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.7869089170985561" />
+      <entry key="MS500" value="4.131095899618752" />
+      <entry key="S2" value="6.6701497677543164" />
+      <entry key="S5" value="11.185308527816858" />
+      <entry key="S10" value="17.198026799974862" />
+      <entry key="S30" value="32.51684944132856" />
+      <entry key="S60" value="49.48452126787156" />
+      <entry key="M2" value="76.65461014964491" />
+      <entry key="M5" value="147.856002663376" />
+      <entry key="M10" value="240.32121366231644" />
+      <entry key="M15" value="299.62852096495675" />
+      <entry key="M30" value="392.28714688486724" />
+      <entry key="H1" value="492.193256000515" />
+      <entry key="H2" value="680.5379853636119" />
+      <entry key="H4" value="1064.2134427179108" />
+      <entry key="D1" value="2862.9178378182373" />
+      <entry key="W1" value="4493.453282450999" />
+    </decayedShown>
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
@@ -134,44 +254,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CMake Application.MyGameProject.executor": "Debug",
-    "CMake Debug.MyGameProject.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "cf.advertisement.text.overridden": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "com.jfrog.conanplugin.addconansupport": "true",
-    "com.jfrog.conanplugin.automanage.cmake.advanced.settings": "true",
-    "com.jfrog.conanplugin.conanexecutable": "conan",
-    "com.jfrog.conanplugin.hasbeensetup": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/GITHUB/GameTest/conan-profiles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.MyGameProject.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.MyGameProject.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;com.jfrog.conanplugin.addconansupport&quot;: &quot;true&quot;,
+    &quot;com.jfrog.conanplugin.automanage.cmake.advanced.settings&quot;: &quot;true&quot;,
+    &quot;com.jfrog.conanplugin.conanexecutable&quot;: &quot;conan&quot;,
+    &quot;com.jfrog.conanplugin.hasbeensetup&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GITHUB/GameTest/conan-profiles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GITHUB\GameTest\conan-profiles" />
@@ -187,6 +308,16 @@
     <configuration name="MyGameProject" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
+    <configuration name="DirectX-Guids" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="DirectX-Guids" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectX-Headers" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="DirectX-Headers" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyGameProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="MyGameProject" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug" RUN_TARGET_PROJECT_NAME="MyGameProject" RUN_TARGET_NAME="MyGameProject">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -197,11 +328,69 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SDL3-shared" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="SDL3-shared" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SDL_uclibc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="SDL_uclibc" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="c4core" type="CMakeRunConfiguration" factoryName="Application" folderName="c4core" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="c4core" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cpm-update-package-lock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="cpm-update-package-lock" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fmt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="fmt" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glad" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="glad" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ryml" type="CMakeRunConfiguration" factoryName="Application" folderName="" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="ryml" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spdlog" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MyGameProject" TARGET_NAME="spdlog" CONFIG_NAME="UCRT64-Debug - UCRT64-Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="CMake Application.MyGameProject" />
-      <item itemvalue="CMake Application.MyGameProject_Nasm" />
       <item itemvalue="CMake Debug.MyGameProject" />
+      <item itemvalue="CMake Application.DirectX-Guids" />
+      <item itemvalue="CMake Application.DirectX-Headers" />
+      <item itemvalue="CMake Application.MyGameProject_Nasm" />
+      <item itemvalue="CMake Application.MyGameProject" />
+      <item itemvalue="CMake Application.SDL3-shared" />
+      <item itemvalue="CMake Application.SDL_uclibc" />
+      <item itemvalue="CMake Application.c4core" />
+      <item itemvalue="CMake Application.cpm-update-package-lock" />
+      <item itemvalue="CMake Application.fmt" />
+      <item itemvalue="CMake Application.glad" />
+      <item itemvalue="CMake Application.ryml" />
+      <item itemvalue="CMake Application.spdlog" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="CMake Debug.MyGameProject" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -236,6 +425,36 @@
       <workItem from="1775402875360" duration="13141000" />
       <workItem from="1775450937515" duration="27000" />
       <workItem from="1775495517783" duration="2489000" />
+      <workItem from="1775621372487" duration="11646000" />
+      <workItem from="1775693841323" duration="14105000" />
+      <workItem from="1775774988861" duration="6000" />
+      <workItem from="1775775185647" duration="580000" />
+      <workItem from="1776094306092" duration="3622000" />
+      <workItem from="1776102980070" duration="11493000" />
+      <workItem from="1776134578659" duration="24539000" />
+      <workItem from="1776214037120" duration="4579000" />
+      <workItem from="1776221502893" duration="7304000" />
+      <workItem from="1776229385130" duration="4664000" />
+      <workItem from="1776393430952" duration="19189000" />
+      <workItem from="1776477936550" duration="68000" />
+      <workItem from="1776478033884" duration="14155000" />
+      <workItem from="1776625361708" duration="26493000" />
+      <workItem from="1778190754810" duration="14000" />
+      <workItem from="1778190887689" duration="12000" />
+      <workItem from="1778191003414" duration="13000" />
+      <workItem from="1778191182764" duration="10000" />
+      <workItem from="1778198489222" duration="1123000" />
+      <workItem from="1778380175182" duration="215000" />
+      <workItem from="1778876430071" duration="7267000" />
+      <workItem from="1779428266136" duration="649000" />
+      <workItem from="1779921187906" duration="2721000" />
+      <workItem from="1779926124018" duration="821000" />
+      <workItem from="1779932699912" duration="21851000" />
+      <workItem from="1780019534063" duration="30805000" />
+      <workItem from="1780172929056" duration="9000" />
+      <workItem from="1780173617254" duration="57000" />
+      <workItem from="1780535744367" duration="5000" />
+      <workItem from="1780549191330" duration="3000" />
     </task>
     <servers />
   </component>
@@ -267,9 +486,54 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>52</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/other/glad-release/src/gl.c</url>
+          <line>8548</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>128</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>232</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>233</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>234</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>241</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>240</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>235</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>236</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp.old</url>
+          <line>237</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -281,8 +545,18 @@
         <watch expression="MSYS" />
         <watch expression="MINGW" />
         <watch expression="UCRT64" />
+        <watch expression="OPENSSL_SSL_LIBRARY" />
+        <watch expression="OPENSSL_CRYPTO_LIBRARY" />
+        <watch expression="D3D12_LIBRARY" />
+      </configuration>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="pEvent-&gt;type" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

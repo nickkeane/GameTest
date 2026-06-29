@@ -5,7 +5,6 @@
 #include "Random.h"
 
 #include <cassert>
-#include <chrono>
 #include <iterator>
 
 namespace NK {

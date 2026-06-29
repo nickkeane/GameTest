@@ -25,8 +25,7 @@
       "inherits": "UCRT64",
       "binaryDir": "build/ucrt64/Debug",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_TOOLCHAIN_FILE": "conan-build-ucrt64/build/Debug/generators/conan_toolchain.cmake"
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
@@ -34,8 +33,7 @@
       "inherits": "UCRT64",
       "binaryDir": "build/ucrt64/Release",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_TOOLCHAIN_FILE": "conan-build-ucrt64/build/Release/generators/conan_toolchain.cmake"
+        "CMAKE_BUILD_TYPE": "Release"
       }
     },
     {
@@ -55,8 +53,7 @@
       "binaryDir": "build/vs2026/Debug",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CONFIGURATION_TYPES": "Debug",
-        "CMAKE_TOOLCHAIN_FILE": "conan-build-vs2026-debug/build/generators/conan_toolchain.cmake"
+        "CMAKE_CONFIGURATION_TYPES": "Debug"
       }
     },
     {
@@ -65,8 +62,7 @@
       "binaryDir": "build/vs2026/Release",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CONFIGURATION_TYPES": "Release",
-        "CMAKE_TOOLCHAIN_FILE": "conan-build-vs2026-release/build/generators/conan_toolchain.cmake"
+        "CMAKE_CONFIGURATION_TYPES": "Release"
       }
     }
   ],

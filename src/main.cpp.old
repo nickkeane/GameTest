@@ -1,0 +1,256 @@
+
+#include <cstdlib>
+#include <limits>
+
+#include "Random.h"
+
+// Ensure we have the expected floating-point support and that fast math is forced
+static_assert(std::numeric_limits<float>::is_iec559,
+              "IEEE 754 float support required");
+static_assert(sizeof(float) == 4, "32-bit float support required");
+
+static_assert(std::numeric_limits<double>::is_iec559,
+              "IEEE 754 double support required");
+static_assert(sizeof(double) == 8, "64-bit double support required");
+
+#ifdef _MSC_VER  // MSBuild
+# ifndef _M_FP_FAST
+#   warning "FP Fast is disabled"
+# endif
+#else  // Not MSBuild
+# ifndef __FAST_MATH__
+#   warning "FP Fast is disabled"
+# endif
+#endif
+
+#include <zlib.h>
+#include <fmt/core.h>
+#include <spdlog/spdlog.h>
+#include <simdjson.h>
+#include <ryml.hpp>
+#ifdef _WIN32
+# include <wrl/client.h>
+using Microsoft::WRL::ComPtr;
+# include <directx/d3d12.h>
+# include <winsock2.h>
+#endif
+#include <asio.hpp>
+
+#include <xxhash.h>
+
+//#include <glad/gl.h>
+
+// Example: NASM-compiled Assembly Math Functions
+// Include maps to global exports from .asm files in src/nasm/*
+#include <nasm/math.h>
+
+//#include "Game.hpp"
+
+#include "Hasher.hpp"
+
+#ifdef _WIN32
+# include <crtdbg.h>
+#endif
+
+void EnableLeakDetection() {
+#if defined(_WIN32) && defined(_MSC_VER_) && defined(_DEBUG)
+  // Enable memory leak check at end of program run
+  int leakChkFlg = _CrtSetDbgFlag(_CRTDBG_REPORT_FLAG);
+  leakChkFlg |= _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF;
+  _CrtSetDbgFlag(leakChkFlg);
+#endif
+}
+
+asio::awaitable<void> asio_udp_echo_server(uint16_t port) {
+  asio::any_io_executor executor = co_await asio::this_coro::executor;
+  asio::ip::udp::socket socket(executor,
+    asio::ip::udp::endpoint(asio::ip::udp::v4(), port));
+
+  char dataBuf[1024];
+  asio::ip::udp::endpoint remoteEndpoint;
+  while (true) {
+    std::size_t bytesRecv = co_await socket.async_receive_from(asio::buffer(dataBuf),
+      remoteEndpoint, asio::use_awaitable);
+    co_await socket.async_send_to(asio::buffer(dataBuf, bytesRecv), remoteEndpoint, asio::use_awaitable);
+  }
+}
+
+int main(const int argc, const char **argv) {
+  (void)argc;
+  (void)argv;
+
+  EnableLeakDetection();
+
+  try {
+
+    // DirectX 12 Test
+#ifdef _WIN32
+    ComPtr<ID3D12Debug> debugController;
+    if (SUCCEEDED(D3D12GetDebugInterface(IID_ID3D12Debug, &debugController))) {
+      debugController->EnableDebugLayer();
+    } else {
+      spdlog::error("Failed to get D3D12 debug interface");
+      return EXIT_FAILURE;
+    }
+#endif
+
+    // ZLib Test
+    z_stream stream = {};
+    stream.zalloc = Z_NULL;
+    stream.zfree = Z_NULL;
+    stream.opaque = Z_NULL;
+    int zlibStatus = deflateInit(&stream, Z_BEST_COMPRESSION);
+    if (zlibStatus != Z_OK) {
+        fmt::print("deflateInit failed with error code: {0}\n", zlibStatus);
+        return EXIT_FAILURE;
+    }
+    zlibStatus = deflateEnd(&stream);
+    if (zlibStatus != Z_OK) {
+        fmt::print("deflateEnd failed with error code: {0}\n", zlibStatus);
+        return EXIT_FAILURE;
+    };
+
+    // FMT Test
+    fmt::println("Hello, {}!", "World");
+
+    // Spdlog Test
+    spdlog::warn("Hello, {}!", "World");
+
+    // SIMDJson Test
+    simdjson::builder::string_builder strbld{};
+    strbld.start_object();
+    strbld.append_key_value("message", "Hello from Conan & CMake!");
+    strbld.end_object();
+    std::string_view strView;
+    (void)strbld.view().get(strView);
+    std::cout << strView << "\n";
+
+    // rapidyaml Test
+    std::string yamlStr = R"(
+project: fkYAML
+required C++ version: 11
+works on:
+  - Linux
+  - macOS
+)";
+    std::vector<char> strBuf(yamlStr.begin(), yamlStr.end());
+    strBuf.push_back('\0');
+    ryml::Tree yamlTree = ryml::parse_in_arena(ryml::to_csubstr(strBuf.data()));
+    ryml::NodeRef yamlRoot = yamlTree.rootref();
+    std::cout << "YAML Project: " << yamlRoot["project"].val() << std::endl;
+    std::cout << "YAML C++ Version: " << yamlRoot["required C++ version"].val() << std::endl;
+
+    // ws2_32 - WinSock 2 Test
+#ifdef _WIN32
+    WSADATA wsaData;
+    int ws2result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+    if (ws2result != 0) {
+        fmt::print("WSAStartup failed with error: {0}\n", ws2result);
+        return EXIT_FAILURE;
+    }
+
+    SOCKET sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (sock == (INVALID_SOCKET)) {
+        fmt::print("Socket creation failed with error: {0}\n", WSAGetLastError());
+        return EXIT_FAILURE;
+    }
+    SOCKADDR_IN serverAddr = {};
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_addr.s_addr = INADDR_ANY;
+    serverAddr.sin_port = htons(10000);
+    if (bind(sock, reinterpret_cast<SOCKADDR*>(&serverAddr), sizeof(SOCKADDR_IN)) == SOCKET_ERROR) {
+        fmt::print("Bind failed with error: {0}\n", WSAGetLastError());
+        closesocket(sock);
+        return EXIT_FAILURE;
+    }
+    if (listen(sock, SOMAXCONN) == SOCKET_ERROR) {
+        fmt::print("Listen failed with error: {0}\n", WSAGetLastError());
+        closesocket(sock);
+        return EXIT_FAILURE;
+    }
+    if (closesocket(sock) == SOCKET_ERROR) {
+        fmt::print("closesocket failed with error: {0}\n", WSAGetLastError());
+        return EXIT_FAILURE;
+    }
+    if (WSACleanup() != 0) {
+        fmt::print("WSACleanup failed with error: {0}\n", WSAGetLastError());
+        return EXIT_FAILURE;
+    }
+#endif
+
+    // TODO: More tests - mswsock
+
+    // asio Test
+    try {
+      auto dataAwaiter = asio_udp_echo_server(10000);
+      // dataAwaiter.await_resume();
+        // uint16_t port = 10000;
+        // asio::io_context io;
+        // asio::ip::tcp::acceptor server(io,
+        //     asio::ip::tcp::endpoint(asio::ip::tcp::v4(), port)
+        // );
+        //
+        // fmt::print("asio Test: Listening on port {0}\n", port);
+        //
+        // server.close();
+    } catch (const std::exception& e) {
+      fmt::print("ASIO exception: {}\n", e.what());
+      return EXIT_FAILURE;
+    }
+
+    // asio Test 2
+    auto coroEcho = [](asio::ip::tcp::socket s) -> asio::awaitable<void> {
+      std::array<char, 1024> data;
+      while (true) {
+        // TODO: Use asio::async_read/write for when data size is known i.e. header. async_read_some may return less-than-buffer-size data
+        size_t const n = co_await s.async_read_some(asio::buffer(data), asio::use_awaitable);
+        co_await s.async_write_some(asio::buffer(data, n), asio::use_awaitable);
+      }
+    };
+
+    asio::io_context io;
+    asio::ip::tcp::socket sock2(io, asio::ip::tcp::endpoint(asio::ip::tcp::v4(), 10000));
+    asio::co_spawn(io, coroEcho(std::move(sock2)), asio::detached);
+
+    // TODO: More Tests
+
+
+    // TODO: Call after GL context creation + make current in GLFW or SFML or SDL3
+    //gladLoaderLoadGL();
+    //gladLoaderUnloadGL();
+
+    // NASM Tests
+    int64_t val = nasmAdd(5LL, 10LL);
+    fmt::print("Result: {0}\n", val);
+    val = nasmSub(66LL, 8LL);
+    fmt::print("Result: {0}\n", val);
+    val = nasmIMul(10LL, 10LL);
+    fmt::print("Result: {0}\n", val);
+    val = nasmIDiv(100LL, 10LL);
+    fmt::print("Result: {0}\n", val);
+
+    // xxHash Test
+    char byteBuf[] = { 'N', 'I', 'C', 'K', ' ', 'T', 'E', 'S', 'T', '\0' };
+    XXH64_hash_t hash64 = XXH3_64bits(byteBuf, sizeof(byteBuf));
+    XXH128_hash_t hash128 = XXH3_128bits(byteBuf, sizeof(byteBuf));
+    char textBuf[] = "NICK TEST";
+    XXH64_hash_t hash64_2 = XXH3_64bits(textBuf, sizeof(textBuf));
+    XXH128_hash_t hash128_2 = XXH3_128bits(textBuf, sizeof(textBuf));
+
+    // Hasher class Tests
+    char helloWorld[] = "Hello World";
+    uint64_t hashVal = NK::Hasher::hashFNV1a(std::string(helloWorld));
+
+    // Random class Tests
+    NK::Random& rndEngine = NK::Random::getInstanceForThread();
+    //NK::Random& rndEngineGlobalEdition = NK::Random::getInstanceGlobal();
+    rndEngine.init();
+    NK::RandomSource<uint64_t> rndSource(rndEngine.getEngine(), 1, 50);
+    fmt::print("Random Val: {0} seconds\n", rndSource());
+  } catch (std::exception const &e) {
+    fmt::print("An exception has occurred: {0}", e.what());
+    return EXIT_FAILURE;
+  }
+
+  return EXIT_SUCCESS;
+}

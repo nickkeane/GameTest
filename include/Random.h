@@ -7,13 +7,10 @@
 
 #include "CRTPSingleton.h"
 
-#include <concepts>
 #include <cstdint>
 #include <generator>
 #include <iterator>
-#include <memory>
 #include <random>
-#include <ranges>
 
 /**
  * Must initialize seed before use.
@@ -25,8 +22,9 @@ namespace NK {
     // ISO C/C++ does not support single byte integrals (char) for use. Upcast to 32-bit integer.
     using ISOCompliantT = std::conditional_t<std::is_integral_v<T> && (sizeof(T) == 1), int32_t, T>;
     using DistribType = std::conditional_t<std::is_integral_v<T>,
-    std::uniform_int_distribution<T>,
-    std::uniform_real_distribution<T>>;
+      std::uniform_int_distribution<T>,
+      std::uniform_real_distribution<T>
+    >;
 
   public:
     RandomSource(std::mt19937_64& eng, ISOCompliantT min, ISOCompliantT max) : mRandomEngine(eng), mDistrib(min, max) {}

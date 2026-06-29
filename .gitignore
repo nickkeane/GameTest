@@ -45,7 +45,6 @@
 build/
 cmake-build-*/
 conan-build-*/
-.vs/
 .cache/
 graph.html
 graph-outdated.json

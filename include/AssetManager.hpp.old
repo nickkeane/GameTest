@@ -1,0 +1,75 @@
+//
+// Created by Nick on 5/29/2026.
+//
+
+#ifndef CONANFILE_PY_ASSETMANAGER_HPP
+#define CONANFILE_PY_ASSETMANAGER_HPP
+
+#include <SDL3/SDL_render.h>
+
+#include <memory>
+#include <shared_mutex>
+#include <string>
+#include <unordered_map>
+
+#include "Bitmap.hpp"
+
+// Aim to implement Centralized Shared Cache with a Main-Thread Finalizer (or Thread-Local staging pools)
+// 1. Create Background Thread jobs to load from file (this becomes a Staging Object)
+// 2. The Staging Object is passed to the Main Thread to create the SDL3-associated object
+
+namespace NK {
+  template <typename T>
+  class AssetRemoverSDL3 {
+  public:
+    void operator()(T* pAsset) {
+      if constexpr (std::is_same_v<T, SDL_Surface>)
+        SDL_DestroySurface(pAsset);
+      else if constexpr (std::is_same_v<T, SDL_Texture>)
+        SDL_DestroyTexture(pAsset);
+    }
+  };
+
+  template <typename T>
+  using SDL3Ptr = std::unique_ptr<T, AssetRemoverSDL3<T>>;
+
+  template <typename T>
+  class AssetCacheSDL3 {
+  public:
+    AssetCacheSDL3();
+    ~AssetCacheSDL3();
+
+  public:
+    std::shared_ptr<T> getById(std::string_view const& id);
+    void add(std::string_view const& id, SDL3Ptr<T> const& pAsset);
+    void clear();
+
+  private:
+    std::shared_mutex mmtxAssetRWLock; // Multiple Readers, Single Writer
+    std::unordered_map<std::string, std::shared_ptr<T>> mmapAssets;
+  };
+
+
+  class AssetManager {
+  public:
+    void process();
+    std::shared_ptr<SDL_Texture> getTexture(std::string_view const& szPath);
+    void requestAsyncLoad(const std::string& szPath);
+
+  private:
+    std::shared_ptr<SDL_Renderer> mpRenderer;
+    AssetCacheSDL3<SDL_Surface> mcacheSurfaces;
+    AssetCacheSDL3<SDL_Texture> mcacheTextures;
+
+  private:
+    struct UploadJob {
+      std::string path;
+      std::string id;
+      SDL_Ptr<SDL_Surface> pSurface;
+    };
+    std::vector<UploadJob> mvecUploadJobQueue;
+    std::mutex mmtxUploadJobQueue;
+  };
+}
+
+#endif  // CONANFILE_PY_ASSETMANAGER_HPP
