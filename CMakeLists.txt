@@ -467,7 +467,7 @@ endif()
 #    target_link_libraries(${PROJECT_NAME} PRIVATE libunwind::libunwind)
 #endif()
 
-## abseil - Highly Optimized STL Libraries from Google
+# abseil - Highly Optimized STL Libraries from Google
 CPMAddPackage("gh:abseil/abseil-cpp#20260526.0")
 target_link_libraries(${PROJECT_NAME} PRIVATE 
     absl::base              # Base Library (absl::base_internal, absl::base_sync, etc.)
@@ -493,6 +493,28 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     absl::synchronization   # Synchronization Library (absl::Mutex, absl::CondVar, absl::Notification, etc.)
     absl::time              # Time Library (absl::Time, absl::Duration, absl::TimeZone, etc.)
 )
+# stb - Alternative STL Libraries
+CPMAddPackage(
+    NAME stb
+    GITHUB_REPOSITORY nothings/stb
+    GIT_TAG master
+    DOWNLOAD_ONLY YES
+)
+if (stb_ADDED)
+    add_library(stb INTERFACE)
+    add_library(stb::stb ALIAS stb)
+
+    target_include_directories(stb INTERFACE ${stb_SOURCE_DIR})
+
+    set(stb_FOUND YES CACHE BOOL "STB was found and generated" FORCE)
+
+    message(STATUS "CPM: stb::stb assembled as header-only INTERFACE target")
+else()
+    message(FATAL_ERROR "CPM: Failed to create stb package")
+endif()
+if (stb_FOUND)
+    target_link_libraries(${PROJECT_NAME} PRIVATE stb::stb)
+endif()
 # mimalloc - Better Memory Allocator from Microsoft
 set(MI_BUILD_TESTS OFF CACHE BOOL "Disable building of mimalloc tests" FORCE)
 set(MI_OVERRIDE ON CACHE BOOL "Override default malloc/new/delete with mimalloc" FORCE)
@@ -531,6 +553,22 @@ if (NOT MSVC AND NOT ANDROID) # SDL3_image provides vendored ZLIB if Android or 
     set(ZLIB_BUILD_TESTING OFF CACHE BOOL "Disable building of zlib tests" FORCE)
     CPMAddPackage("gh:madler/zlib@1.3.2")
     target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
+endif()
+# lz4 - Compression/Decompression
+CPMAddPackage(
+    NAME lz4
+    GITHUB_REPOSITORY lz4/lz4
+    VERSION 1.10.0
+    DOWNLOAD_ONLY YES
+)
+if (lz4_ADDED)
+    #set(BUILD_SHARED_LIBS OFF)
+	#set(BUILD_STATIC_LIBS ON)
+	set(LZ4_BUILD_CLI OFF)
+    add_subdirectory(${lz4_SOURCE_DIR}/build/cmake lz4_build)
+    target_link_libraries(${PROJECT_NAME} PRIVATE lz4)
+else()
+    message(FATAL_ERROR "CPM: Failed to create lz4 package")
 endif()
 # fmt - Text Formatting Utility
 CPMAddPackage("gh:fmtlib/fmt#12.1.0")
@@ -664,18 +702,14 @@ endif()
 ## sigslot - C++14 Signal/Slot Library
 #CPMAddPackage("gh:palacaze/sigslot@1.2.3")
 #target_link_libraries(${PROJECT_NAME} PRIVATE Pal::Sigslot)
-# cista - Serialization Library
-set(CISTA_USE_MIMALLOC ON CACHE BOOL "Enable mimalloc support" FORCE)
-CPMAddPackage("gh:felixguendling/cista@0.16")
-target_link_libraries(${PROJECT_NAME} PRIVATE cista::cista)
-## cereal - Serialization Library
-#set(JUST_INSTALL_CEREAL ON CACHE BOOL "Just install cereal without building sandbox, docs, or tests" FORCE)
-#CPMAddPackage("gh:USCilab/cereal@1.3.2")
-#target_link_libraries(${PROJECT_NAME} PRIVATE cereal::cereal)
-# flatbuffers - Serialization Library by Google
-##set(FLATBUFFERS_BUILD_TESTS OFF CACHE BOOL "Disable building of Flatbuffers tests" FORCE)
-#CPMAddPackage("gh:google/flatbuffers@25.12.19")
-#target_link_libraries(${PROJECT_NAME} PRIVATE FlatBuffers::FlatBuffers)
+# # cista - Serialization Library (Potentially faster than Flatbuffers, but could also be buggier)
+# set(CISTA_USE_MIMALLOC ON CACHE BOOL "Enable mimalloc support" FORCE)
+# CPMAddPackage("gh:felixguendling/cista@0.16")
+# target_link_libraries(${PROJECT_NAME} PRIVATE cista::cista)
+# flatbuffers - Serialization Library by Google for GameDev
+set(FLATBUFFERS_BUILD_TESTS OFF CACHE BOOL "Disable building of Flatbuffers tests" FORCE)
+CPMAddPackage("gh:google/flatbuffers@25.12.19")
+target_link_libraries(${PROJECT_NAME} PRIVATE FlatBuffers::FlatBuffers)
 ## crow - HTTP/Web Socket Microframework
 #set(CROW_INSTALL OFF CACHE BOOL "Disable installation of Crow" FORCE) # Breaks on Project asio
 #set(CROW_ENABLE_SSL OFF CACHE BOOL "Enable SSL support (HTTPS) for Crow" FORCE) # Requires OpenSSL
@@ -693,6 +727,14 @@ target_link_libraries(${PROJECT_NAME} PRIVATE cista::cista)
 #        MESSAGE(FATAL_ERROR "Expected xxHash::xxhash target does not exist")
 #    endif()
 #endif()
+# nameof - C++11 Reflection for Types
+CPMAddPackage("gh:Neargye/nameof@0.10.5")
+target_link_libraries(${PROJECT_NAME} PRIVATE nameof::nameof)
+# magic_enum - C++11 Reflection for Enums
+CPMAddPackage("gh:Neargye/magic_enum@0.9.8")
+target_link_libraries(${PROJECT_NAME} PRIVATE magic_enum::magic_enum)
+## box2d - 2D Physics Engine
+## joltphysics - 2D/3D Physics Engine
 ## flecs - Entity System
 #CPMAddPackage("gh:sandermertens/flecs@4.1.5")
 #target_link_libraries(${PROJECT_NAME} PRIVATE flecs::flecs)
@@ -716,6 +758,25 @@ else ()
     add_subdirectory(other/glad-release)
 endif()
 target_link_libraries(${PROJECT_NAME} PRIVATE glad::glad)
+# # TODO: Clay - UI Layout Library
+# # microui - Micro UI Library
+# CPMAddPackage(
+#         NAME microui
+#         GITHUB_REPOSITORY rxi/microui
+#         GIT_TAG master
+#         DOWNLOAD_ONLY YES
+# )
+# if (microui_ADDED)
+#     add_library(microui ${microui_SOURCE_DIR}/src/microui.c)
+#     add_library(microui::microui ALIAS microui)
+#     target_include_directories(microui PUBLIC ${microui_SOURCE_DIR}/src)
+
+#     set(microui_FOUND YES CACHE BOOL "microui was found and generated" FORCE)
+
+#     message(STATUS "CPM: microui::microui assembled as static library target")
+# else()
+#     message(FATAL_ERROR "CPM: Failed to create microui package")
+# endif()
 # ImGUI - Overlay Immediate Mode GUI Library
 CPMAddPackage(
         NAME imgui
@@ -753,7 +814,8 @@ if (NOT MSVC AND NOT ANDROID) # SDL3_image provides vendored Freetype if Android
     target_link_libraries(${PROJECT_NAME} PRIVATE Freetype::Freetype)
 endif()
 # SDL3 - Simple Direct Media Layer for Windowing, Input, Audio, and more
-set(SDL_TEST_LIBRARY OFF)
+set(SDL_TEST_LIBRARY OFF CACHE BOOL "Disable Test Library" FORCE)
+set(BUILD_DOCS OFF CACHE BOOL "Disable building of SDL_mixer/external/flac docs" FORCE)
 CPMAddPackage("gh:libsdl-org/SDL#release-3.4.10")
 # TODO: The below vendored check doesn't seem to be working for VS2026...
 #set(SDL3_IMAGE_ZLIB OFF CACHE BOOL "" FORCE)
@@ -764,6 +826,7 @@ CPMAddPackage("gh:libsdl-org/SDL_image#release-3.4.4")
 #set(SDLTTF_FREETYPE_VENDORED OFF CACHE BOOL "Disable Freetype vendoring" FORCE)
 CPMAddPackage("gh:libsdl-org/SDL_ttf#release-3.2.2")
 CPMAddPackage("gh:libsdl-org/SDL_mixer#release-3.2.4")
+CPMAddPackage("gh:icculus/SDL_sound@3.2.0")
 CPMAddPackage("gh:libsdl-org/SDL_net#release-3.2.0")
 # TODO: SDL_shadercross is in development
 #CPMAddPackage("gh:libsdl-org/SDL_shadercross#main")
@@ -772,9 +835,15 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     SDL3_image::SDL3_image 
     SDL3_ttf::SDL3_ttf 
     SDL3_mixer::SDL3_mixer
+    SDL3_sound::SDL3_sound
     SDL3_net::SDL3_net
     #SDL3_shadercross::SDL3_shadercross
 )
+## assimp - Asset Importer Library (Depends on ZLib or SDL3_image vendored ZLib)
+## TODO: Can we prevent assimp or SDL3_image from declaring zlibstatic? How do we handle this external conflict?
+set(ASSIMP_BUILD_ZLIB OFF CACHE BOOL "Disable building of ZLib for Assimp" FORCE)
+CPMAddPackage("gh:assimp/assimp@6.0.5")
+target_link_libraries(${PROJECT_NAME} PRIVATE assimp::assimp)
 # pybind11 - C++11 Python 3.x.x Bindings. Includes Python C API headers and libraries for embedding.
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Embed)
 set(PYBIND11_FINDPYTHON "NEW" CACHE STRING "Use new FindPython module for pybind11" FORCE)
